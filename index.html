@@ -18,49 +18,52 @@
 <body>
   <div class="container-fluid">
     <div class="row">
-      <!-- Left column for search and history -->
+      <!-- Left column for weather dashboard tilte, search input, and search history -->
       <div class="col-4 bg-primary min-100-vh p-5">
+
+    <!-- Weather Dashboard Title -->
     <h1 class="text-black text-align-center mb-5"><u>Weather Dashboard</u></h1>
+
+    <!--search input-->
     <form id="search-weather" class="form">
         <div class="input-city">
-            <input id="search-input" class="form-control" type="text" placeholder="Type in a City!">
+            <input id="search-input" class="form-control" type="text" placeholder="Type in a City">
         </div>
+    <!--Search btn-->
             <div class="search-btn">
-              <button class="btn btn-light" type="submit"><i class="fa-solid fa-cloud-sun-rain"></i> Search <i
-                  class="fa-solid fa-search"></i></button>
+              <button class="btn btn-light" type="submit"><i class="fa-solid fa-cloud-sun-rain"></i> SEARCH <i class="fa-solid fa-search"></i></button>
             </div>
     </form>
 
-        <!--Search History Section-->
+    <!--Search History Section-->
         <div class="mt-2">
           <h2 class="text-black">Search History</h2>
-          <ul id="search-history" class="list-group">
+          <ul id="search-history" class="list-group ">
             <!-- Search history items will be displayed here in a list -->
           </ul>
         </div>
       </div>
 
-      <!-- Right column for forecasts -->
-      <div class="col-8 bg-light p-5">
-        <!-- Daily Forecast Section -->
-        <section id="daily-forecast" class="forecast-section">
-          <h2 class="section-title"><u>Today's Forecast</u></h2>
-          <div class="forecast-info">
+<!-- Right column for current forecast and 5-day forecasts -->
+<div class="col-8 bg-light p-5">
+    <!-- Daily Forecast Section -->
+    <section id="daily-forecast" class="forecast-section">
+        <h2 class="section-title"><u>Today's Forecast</u></h2>
+        <div class="forecast-info">
             <!-- Daily forecast data will be displayed here -->
-          </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 5-Day Forecast Section -->
-        <section id="five-day-forecast" class="forecast-section mt-5">
-          <h2 class="section-title"><u>5-Day Forecast</u></h2>
-          <div class="forecast-info">
+    <!-- 5-Day Forecast-->
+    <section id="five-day-forecast" class="forecast-section mt-5">
+        <h2 class="section-title"><u>5-Day Forecast</u></h2>
+        <div class="forecast-info forecast-cards">
             <!-- 5-day forecast data will be displayed here -->
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
+        </div>
+    </section>
+</div>
 
+    <!--js-->
   <script src="./assets/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
