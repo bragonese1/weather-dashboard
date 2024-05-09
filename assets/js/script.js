@@ -49,14 +49,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p>Humidity: ${humidity}%</p>
                 <p>Wind Speed: ${windSpeed} mph</p>
             </div>
+            </div>
         `;
     }
-    // Function created to display the 5 day forecast (still needs work, displaying more than five days, and dates are wrong)
+    // Function created to display the 5 day forecast (* date by 1000 to convert seconds to milliseconds/i += 8 to account for 3 hour interval in data.)
     function displayForecast(data) {
         forecastCardsContainer.innerHTML = "";
-        for (let i = 0; i < data.list.length; i += 4) {
+        for (let i = 0; i < data.list.length; i += 8) {
             const forecast = data.list[i];
-            const date = new Date(forecast.dt*5);
+            const date = new Date(forecast.dt*1000);
             const iconUrl = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
             const temperature = forecast.main.temp;
             const humidity = forecast.main.humidity;
